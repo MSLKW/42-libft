@@ -15,4 +15,5 @@
 int	main(void)
 {
 	printf("Testing");
+	printf("DOUBLE TESTING");
 }
