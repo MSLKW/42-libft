@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 16:01:34 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/25 16:54:41 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/02/26 09:35:33 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	test_func(char *s, int c, size_t n)
 {
 	printf("Given ptr: %p\n", s);
 	printf("Before memset: %s\n", s);
-	void *ptr = memset(s, c, n);
+	void *ptr = memset(s + 5, c, n);
 	printf("After memset: %s\n", s);
 	printf("ptr: %p\n", ptr);
 		
@@ -29,7 +29,7 @@ void	ft_test_func(char *s, int c, size_t n)
 {
 	printf("Given ptr: %p\n", s);
 	printf("Before ft_memset: %s\n", s);
-	void *ptr = ft_memset(s, c, n);
+	void *ptr = ft_memset(s + 5, c, n);
 	printf("After ft_memset: %s\n", s);
 	printf("ptr: %p\n", ptr);
 		

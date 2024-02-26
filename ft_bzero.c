@@ -6,7 +6,13 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 15:35:38 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/25 15:36:32 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/02/26 09:49:46 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, 0, n);
+}
