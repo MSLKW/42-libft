@@ -6,19 +6,19 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 10:58:58 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/27 11:11:09 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/02/27 11:38:14 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "../libft.h"
 
-void	test(char *c)
+void	test(char *str)
 {
-	int c_val = atoi(c);
-	// int	ft_c_val = ft_atoi(c);
-	printf("c: %s | c_val: %i\n", c, c_val);
-	// printf("c: %s | ft_c_val: %i\n\n", c, ft_c_val);
+	int c_val = atoi(str);
+	int	ft_c_val = ft_atoi(str);
+	printf("str: %s | c_val: %i\n", str, c_val);
+	printf("str: %s | ft_c_val: %i\n\n", str, ft_c_val);
 }
 
 void	testcase()

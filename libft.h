@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 10:54:28 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/27 11:00:21 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/02/27 11:38:29 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 // typedef unsigned long size_t;
 
 int	ft_strlen(char *str);
-int	ft_atoi(char *str);
+int	ft_atoi(const char *str);
 int	ft_isalpha(int c);
 int	ft_isascii(int c);
 int	ft_isalnum(int c);

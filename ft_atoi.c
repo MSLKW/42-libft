@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 10:35:43 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/27 11:16:19 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/02/27 11:32:06 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,31 @@ static int ft_isspace(char c)
 		|| c == '\r');
 }
 
+// as many isspace spaces as you like in the first half
+// only one symbol sign, anymore breaks the program
+// any numeric, any other character than numeric will break and give the current result
 int	ft_atoi(const char *str)
 {
-	// as many isspace spaces as you like in the first half
-	// only one symbol sign, anymore breaks the program
-	// any numeric, any other character than numeric will break and give the current result
-
 	int	index;
+	int	is_negative;
+	int	number;
 
-	while(ft_isspace(str[index]))
+	index = 0;
+	is_negative = 1;
+	while (ft_isspace(str[index]))
+		index++;
+	if (str[index] == '-' || str[index] == '+')
 	{
-
+		if (str[index] == '-')
+			is_negative = -1;
+		index++;
 	}
+	else if (ft_isdigit(str[index]) == 0)
+		return (0);
+	while (ft_isdigit(str[index]) == 1)
+	{
+		number = number * 10 + (str[index] - '0');
+		index++;
+	}
+	return (number * is_negative);
 }
