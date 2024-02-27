@@ -6,7 +6,23 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 11:35:13 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/23 11:35:17 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/02/27 10:17:35 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dest, char *src, size_t size)
+{
+	size_t	index;
+
+	index = -1;
+	if (size == 0)
+		return (ft_strlen(src));
+	while (++index < size - 1 && src[index] != '\0')
+	{
+		dest[index] = src[index];
+	}
+	dest[index] = '\0';
+	return (ft_strlen(src));
+}

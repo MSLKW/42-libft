@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 13:40:42 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/23 14:15:34 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/02/27 10:18:54 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ char	*ft_strchr(const char *str, int c)
 	while (*ptr != '\0')
 	{
 		if (*ptr == c)
-		{
 			return (ptr);
-		}
 		ptr++;
 	}
 	return (NULL);

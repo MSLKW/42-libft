@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 10:55:06 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/23 11:55:15 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/02/27 10:14:06 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,7 @@ int	ft_strlen(char *str)
 	int	count;
 
 	count = 0;
-	while (*str != '\0')
-	{
+	while (str[count] != '\0')
 		count++;
-		str++;
-	}
 	return (count);
 }
