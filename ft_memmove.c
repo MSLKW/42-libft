@@ -6,7 +6,37 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 15:36:50 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/25 15:37:03 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/02/27 12:12:52 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	// make it so that it doesn't overlap
+	// if destination is further down in the stack from src, copy from the right side
+	// if destination is further up, copy from left side
+	unsigned char	*dst_uchar;
+	unsigned char	*src_uchar;
+	
+	dst_uchar = (unsigned char*)dst;
+	src_uchar = (unsigned char*)src;
+	if (dst_uchar > src_uchar)
+	{
+		while (len-- > 0)
+		{
+			dst_uchar[len] = src_uchar[len];
+		}
+	}
+	else
+	{
+		while (len-- > 0)
+		{
+			*dst_uchar = *src_uchar;
+			dst_uchar++;
+			src_uchar++;
+		}
+	}
+	return (dst);
+}
