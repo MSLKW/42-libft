@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 10:54:28 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/01 14:43:38 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/01 17:06:27 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 // #endif
 // typedef unsigned long size_t;
 
+// part 1
 int	ft_strlen(char *str);
 int	ft_atoi(const char *str);
 int	ft_isalpha(int c);
@@ -34,7 +35,6 @@ int	ft_tolower(int c);
 int	ft_toupper(int c);
 int	ft_strncmp(const char *str1, const char *str2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
-char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 void	*ft_memmove(void *dst, const void *src, size_t len);
@@ -48,5 +48,10 @@ void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
+
+// part 2
+char	*ft_substr(const char *s, unsigned int start, size_t len);
+char	*ft_strjoin(const char *s1, const char *s2);
+
 
 #endif

@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/01 12:59:24 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/01 16:50:44 by maxliew          ###   ########.fr       */
+/*   Created: 2024/03/01 16:49:58 by maxliew           #+#    #+#             */
+/*   Updated: 2024/03/01 16:57:28 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	unsigned int	index;
-	char			*new_str;
+	char	*joined_str;
+	size_t	joined_str_size;
 
-	index = 0;
-	new_str = ft_calloc(len + 1, sizeof(char));
-	if (new_str == NULL || len == 0)
-		return (NULL);
-	ft_strlcpy(new_str, (char *)s + start, len + 1);
-	return (new_str);
+	joined_str = ft_strdup(s1);
+	joined_str_size = ft_strlen(s1) + ft_strlen(s2);
+	ft_strlcat(joined_str, (char *)s2, joined_str_size);
+	return (joined_str);
 }
