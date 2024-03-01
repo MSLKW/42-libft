@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 10:54:28 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/01 11:39:13 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/01 14:43:38 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 # define CAPITALIZATION_DIFF 32
 
 // Temporary circumvention
-#ifndef NULL
-# define NULL ((void*)0)
-#endif
-typedef unsigned long size_t;
+// #ifndef NULL
+// # define NULL ((void*)0)
+// #endif
+// typedef unsigned long size_t;
 
 int	ft_strlen(char *str);
 int	ft_atoi(const char *str);
@@ -34,6 +34,7 @@ int	ft_tolower(int c);
 int	ft_toupper(int c);
 int	ft_strncmp(const char *str1, const char *str2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 void	*ft_memmove(void *dst, const void *src, size_t len);
