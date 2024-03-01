@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.test.c                                   :+:      :+:    :+:   */
+/*   ft_strdup.test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 10:30:44 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/01 12:16:18 by maxliew          ###   ########.fr       */
+/*   Created: 2024/03/01 12:21:55 by maxliew           #+#    #+#             */
+/*   Updated: 2024/03/01 12:27:13 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,19 @@
 #include <stdio.h>
 #include <string.h>
 
-void	test_func(char *s, int c, size_t n)
+void	test_func(char *src)
 {
-	printf("Given ptr: %p\n", s);
-	printf("memchr: %s\n", s);
-	char *ptr = (char*)memchr(s, c, n);
-	printf("ptr result: %s\n", ptr);
-	printf("ptr: %p\n", ptr);
-	printf("\n");
+	printf("src: %s | src: %p\n", src, src);
+	char *new_str = strdup(src);
+	char *ft_new_str = ft_strdup(src);
+	printf("new_str: %s | new_str: %p\n", new_str, new_str);
+	printf("ft_new_str: %s | ft_new_str: %p\n", ft_new_str, ft_new_str);
 }
-
-void	ft_test_func(char *s, int c, size_t n)
-{
-	printf("Given ptr: %p\n", s);
-	printf("ft_memchr: %s\n", s);
-	char *ptr = (char*)ft_memchr(s, c, n);
-	printf("ptr result: %s\n", ptr);
-	printf("ptr: %p\n", ptr);	
-	printf("\n");
-}
-
 
 void	testcase()
 {	
 	char	s[50] = "The only way";
-	test_func(s, 'o', 10);
-	ft_test_func(s, 'o', 10);
+	test_func(s);
 }
 
 int	main(void)

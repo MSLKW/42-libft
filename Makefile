@@ -1,6 +1,33 @@
+NAME = libft.a
+
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+
 DEPS = libft.h
 
-testmake: ft_atoi.o ft_isdigit.o ft_atoi.test.o
-	$(CC) -o testmake ft_atoi.o ft_isdigit.o ft_atoi.test.o
+SRCS_DIR = ./
+SRCS_FILES = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c\
+ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_strchr.c ft_strdup.c ft_strlcat.c ft_strlcpy.c\
+ft_strlen.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_tolower.c ft_toupper.c
+SRCS = $(addprefix $(SRCS_DIR), $(SRCS_FILES))
+
+OBJS = $(SRCS:.c=.o)
+
+.PHONY = all clean fclean re
+
+$(NAME): $(OBJS) $(DEPS)
+	ar -rc $(NAME) $(OBJS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+all: $(NAME) clean
+
+fclean: clean
+	rm -f $(NAME)
+
+clean:
+	rm -f $(OBJS)
+
+re: fclean all
+
