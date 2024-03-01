@@ -6,16 +6,14 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 15:18:44 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/23 15:46:28 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/01 13:13:27 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	// loop over haystack
-	// check for needle
 	size_t	hay_i;
 	int		ndle_i;
 	char	*hay_ptr;

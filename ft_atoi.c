@@ -6,15 +6,15 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 10:35:43 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/27 11:32:06 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/01 13:06:10 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_isspace(char c)
+static int	ft_isspace(char c)
 {
-	return(c == ' '
+	return (c == ' '
 		|| c == '\n'
 		|| c == '\t'
 		|| c == '\v'
@@ -22,9 +22,6 @@ static int ft_isspace(char c)
 		|| c == '\r');
 }
 
-// as many isspace spaces as you like in the first half
-// only one symbol sign, anymore breaks the program
-// any numeric, any other character than numeric will break and give the current result
 int	ft_atoi(const char *str)
 {
 	int	index;

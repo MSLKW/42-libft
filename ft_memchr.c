@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 15:36:43 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/26 11:49:25 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/01 13:07:43 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	index;
+	size_t			index;
 	unsigned char	*ptr;
 
 	ptr = (unsigned char *)s;
