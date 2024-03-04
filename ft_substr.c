@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 12:59:24 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/01 16:50:44 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/04 11:37:44 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	unsigned int	index;
 	char			*new_str;
 
-	index = 0;
 	new_str = ft_calloc(len + 1, sizeof(char));
 	if (new_str == NULL || len == 0)
 		return (NULL);

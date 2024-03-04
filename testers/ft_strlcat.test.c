@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 12:28:45 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/01 12:42:37 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/03 10:52:03 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	test_func(char *dest, char *src, size_t size)
 	char *ft_src = ft_strdup(src);
 	char *ft_dest = ft_strdup(dest);
 	printf("BEFORE | dest<%p>: %s | src<%p>: %s | size: %zu\n", dest, dest, src, src, size);
-	size_t new_size= strlcat(dest, src, size);
+	size_t new_size = strlcat(dest, src, size);
 	printf("AFTER | dest<%p>: %s | src<%p>: %s | new_size: %zu\n\n", dest, dest, src, src, new_size);
 	printf("BEFORE | ft_dest<%p>: %s | ft_src<%p>: %s | size: %zu\n", ft_dest, ft_dest, ft_src, ft_src, size);
 	size_t ft_new_size = ft_strlcat(ft_dest, ft_src, size);

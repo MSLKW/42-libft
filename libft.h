@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 10:54:28 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/01 17:06:27 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/03 11:50:07 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,8 @@
 #include <stdlib.h>
 # define CAPITALIZATION_DIFF 32
 
-// Temporary circumvention
-// #ifndef NULL
-// # define NULL ((void*)0)
-// #endif
-// typedef unsigned long size_t;
-
 // part 1
-int	ft_strlen(char *str);
+int	ft_strlen(const char *str);
 int	ft_atoi(const char *str);
 int	ft_isalpha(int c);
 int	ft_isascii(int c);
@@ -39,7 +33,7 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_calloc(size_t count, size_t size);
-char	*ft_strdup(char *src);
+char	*ft_strdup(const char *src);
 size_t	ft_strlcat(char *dest, char *src, size_t size);
 size_t	ft_strlcpy(char *dest, char *src, size_t size);
 void	*ft_memset(void *s, int c, size_t n);
@@ -52,6 +46,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 // part 2
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
-
+char	*ft_strtrim(const char *s1, const char *set);
 
 #endif
