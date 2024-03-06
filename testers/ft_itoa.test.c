@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_itoa.test.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/04 14:32:50 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/06 15:50:41 by maxliew          ###   ########.fr       */
+/*   Created: 2024/03/06 15:46:14 by maxliew           #+#    #+#             */
+/*   Updated: 2024/03/06 16:37:09 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include "../libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	test(int n)
 {
-	write(fd, &c, sizeof(char));
+	char *str = ft_itoa(n);
+	printf("n: %i | str: %s\n", n, str);
+}
+
+int	main(void)
+{
+	test(9);
+	test(15);
+	test(25);
+	test(-1509);
+	test(-2147483648); // seggy fault
 }

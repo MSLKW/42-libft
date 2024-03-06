@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 10:54:28 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/04 14:37:58 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/06 16:09:51 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <unistd.h>
 #include <stdlib.h>
+# define NULL_SIZE 1
 # define CAPITALIZATION_DIFF 32
 
 // part 1
@@ -51,5 +52,6 @@ char	**ft_split(const char *s1, char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
+char	*ft_itoa(int n);
 
 #endif
