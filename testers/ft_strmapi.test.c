@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 09:50:31 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/06 19:58:44 by maxliew          ###   ########.fr       */
+/*   Created: 2024/03/06 19:46:47 by maxliew           #+#    #+#             */
+/*   Updated: 2024/03/06 20:04:38 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <stdio.h>
 
-char	*ft_strdup(const char *src)
+char	cool_func(unsigned int index, char c)
 {
-	char	*dest;
-	int		index;
-
-	dest = malloc(sizeof(char) * ft_strlen(src));
-	if (dest == NULL)
-		return (NULL);
-	index = 0;
-	while (src[index] != '\0')
+	printf("index: %i\n", index);
+	if (c >= 'a' && c <= 'z')
 	{
-		dest[index] = src[index];
-		index++;
+		c -= CAPITALIZATION_DIFF;
 	}
-	dest[index] = '\0';
-	return (dest);
+	return (c);
+}
+
+void	test(char	*s)
+{
+	char	(*func)(unsigned int, char) = &cool_func;
+	char	*new_str = ft_strmapi(s, func);
+	printf("new_str: %s\n", new_str);
+}
+
+int	main(void)
+{
+	test("INcREdiBlE");
 }

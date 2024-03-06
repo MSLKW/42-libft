@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 09:50:31 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/06 19:58:44 by maxliew          ###   ########.fr       */
+/*   Created: 2024/03/06 20:08:50 by maxliew           #+#    #+#             */
+/*   Updated: 2024/03/06 20:28:19 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
-{
-	char	*dest;
-	int		index;
+// static char	*get_str_ptr(char *s, unsigned int index)
+// {
+// 	while (index > 0)
+// 	{
+// 		s++;
+// 		index--;
+// 	}
+// 	return (s);
+// }
 
-	dest = malloc(sizeof(char) * ft_strlen(src));
-	if (dest == NULL)
-		return (NULL);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	unsigned int	index;
+
+	if (s == NULL || f == NULL)
+		return ;
 	index = 0;
-	while (src[index] != '\0')
+	while (s[index] != '\0')
 	{
-		dest[index] = src[index];
+		f(index, s + index);
 		index++;
 	}
-	dest[index] = '\0';
-	return (dest);
 }

@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.test.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/27 09:50:31 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/06 19:58:44 by maxliew          ###   ########.fr       */
+/*   Created: 2024/03/06 20:20:08 by maxliew           #+#    #+#             */
+/*   Updated: 2024/03/06 20:27:16 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <stdio.h>
 
-char	*ft_strdup(const char *src)
+void	cool_func(unsigned int index, char *c)
 {
-	char	*dest;
-	int		index;
-
-	dest = malloc(sizeof(char) * ft_strlen(src));
-	if (dest == NULL)
-		return (NULL);
-	index = 0;
-	while (src[index] != '\0')
+	printf("index: %i | c: %s\n", index, c);
+	if (*c >= 'a' && *c <= 'z')
 	{
-		dest[index] = src[index];
-		index++;
+		*c -= CAPITALIZATION_DIFF;
 	}
-	dest[index] = '\0';
-	return (dest);
+}
+
+void	test(char	*s)
+{
+	void	(*func)(unsigned int, char *) = &cool_func;
+	ft_striteri(s, func);
+	printf("new_str: %s\n", s);
+}
+
+int	main(void)
+{
+	char	s[50] = "INcDReDiBLE";
+	test(s);
 }
