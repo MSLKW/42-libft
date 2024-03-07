@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 11:50:35 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/07 14:11:59 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/07 18:19:29 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if(lst == NULL || new == NULL)
-		return (NULL);
+		return ;
 	new->next = *lst;
 	*lst = new;
 }
