@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 11:53:06 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/04 14:47:55 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/07 11:16:29 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	**ft_split(const char *s, char c)
 	char	**split_arr;
 	char	*str;
 
-	split_arr = ft_calloc(count_words(s, c) + 1, sizeof(char*));
+	split_arr = ft_calloc(count_words(s, c) + 1, sizeof(char *));
 	if (split_arr == NULL)
 		return (NULL);
 	index = 0;
