@@ -15,6 +15,11 @@ SRCS = $(addprefix $(SRCS_DIR), $(SRCS_FILES))
 
 OBJS = $(SRCS:.c=.o)
 
+BONUS_FILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+ft_lstclear.c ft_lstiter.c ft_lstmap.c
+BONUS = $(addprefix $(SRCS_DIR), $(BONUS_FILES))
+BONUS_OBJS = $(BONUS:.c=.o)
+
 .PHONY = all clean fclean re
 
 $(NAME): $(OBJS) $(DEPS)
@@ -29,7 +34,9 @@ fclean: clean
 	rm -f $(NAME)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 re: fclean all
 
+bonus: $(BONUS_OBJS) $(DEPS)
+	ar -rc $(NAME) $(BONUS_OBJS)
