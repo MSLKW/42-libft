@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 11:53:06 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/07 11:16:29 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 16:13:53 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ char	**ft_split(const char *s, char c)
 	int		start;
 	int		index;
 	int		arr_index;
+	int		word_flag;
 	char	**split_arr;
-	char	*str;
 
 	split_arr = ft_calloc(count_words(s, c) + 1, sizeof(char *));
 	if (split_arr == NULL)
@@ -50,18 +50,26 @@ char	**ft_split(const char *s, char c)
 	index = 0;
 	arr_index = 0;
 	start = index;
-	while (index < ft_strlen(s) + 1)
+	word_flag = 0;
+	while (s[index] != '\0')
 	{
-		if (s[index] == c || s[index] == '\0')
+		if (word_flag == 0 && s[index] != c)
 		{
-			str = ft_substr(s, start, index - start);
-			if (str == NULL)
-				return (NULL);
-			split_arr[arr_index] = str;
+			word_flag = 1;
+			start = index;
+		}
+		else if (word_flag == 1 && s[index] == c)
+		{
+			split_arr[arr_index] = ft_substr(s, start, index - start);
 			arr_index++;
-			start = index + 1;
+			word_flag = 0;
 		}
 		index++;
+	}
+	if(word_flag == 1)
+	{
+		split_arr[arr_index] = ft_substr(s, start, index - start);
+		arr_index++;
 	}
 	split_arr[arr_index] = NULL;
 	return (split_arr);

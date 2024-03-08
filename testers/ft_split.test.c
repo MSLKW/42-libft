@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 12:23:31 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/04 14:13:04 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 16:12:41 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,13 @@ void	test_func(char *str, char c)
 		printf("%s, ", split_arr[index]);
 		index++;
 	}
+	printf("%s", split_arr[index]);
 	printf("}\n");
 }
 
 void	testcase()
 {	
-	char	s1[50] = "The only way that is";
+	char	s1[50] = "   olol";
 	char	c = ' ';
 	test_func(s1, c);
 }

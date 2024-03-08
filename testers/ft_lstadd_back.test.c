@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 13:51:23 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/07 13:51:45 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 14:44:05 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ void	show_list(t_list *lst)
 
 void	test()
 {
-	t_list *first_node = ft_lstnew("FIRST");
-	t_list **list = &first_node;
-	ft_lstadd_back(list, ft_lstnew("SECOND"));
-	ft_lstadd_back(list, ft_lstnew("THIRD"));
-	ft_lstadd_back(list, ft_lstnew("FOURTH"));
-	show_list(*list);
-	t_list *last_node = ft_lstlast(*list);
+	t_list *list = NULL;
+	printf("test cool");
+	ft_lstadd_back(&list, ft_lstnew("SECOND"));
+	ft_lstadd_back(&list, ft_lstnew("THIRD"));
+	ft_lstadd_back(&list, ft_lstnew("FOURTH"));
+	show_list(list);
+	t_list *last_node = ft_lstlast(list);
 	printf("ft_lstlast<%p> | content: %s | next: %p\n", last_node, (char *)last_node->content, last_node->next);
 }
 
