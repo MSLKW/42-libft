@@ -6,12 +6,11 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 15:31:59 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/07 11:15:41 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 19:46:17 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static	int	count_digits(int n)
 {
@@ -45,7 +44,7 @@ static	void	ft_addnb(int n, char *nb_str)
 		ft_strlcpy(nb_str, "-", 1 + NULL_SIZE);
 		n = -n;
 	}
-	if (n > 10)
+	if (n >= 10)
 	{
 		ft_addnb(n / 10, nb_str);
 		n = n % 10;

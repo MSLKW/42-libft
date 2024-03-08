@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 11:53:06 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/08 16:13:53 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 20:11:16 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,36 +41,27 @@ char	**ft_split(const char *s, char c)
 	int		start;
 	int		index;
 	int		arr_index;
-	int		word_flag;
 	char	**split_arr;
 
+	if (s == NULL)
+		return (NULL);
 	split_arr = ft_calloc(count_words(s, c) + 1, sizeof(char *));
 	if (split_arr == NULL)
 		return (NULL);
-	index = 0;
+	index = -1;
+	start = -1;
 	arr_index = 0;
-	start = index;
-	word_flag = 0;
-	while (s[index] != '\0')
+	while (++index < ft_strlen(s) + NULL_SIZE)
 	{
-		if (word_flag == 0 && s[index] != c)
-		{
-			word_flag = 1;
+		if (start == -1 && s[index] != c)
 			start = index;
-		}
-		else if (word_flag == 1 && s[index] == c)
+		else if (start >= 0 && (s[index] == c || s[index] == '\0'))
 		{
-			split_arr[arr_index] = ft_substr(s, start, index - start);
-			arr_index++;
-			word_flag = 0;
+			split_arr[arr_index++] = ft_substr(s, start, index - start);
+			start = -1;
 		}
-		index++;
-	}
-	if(word_flag == 1)
-	{
-		split_arr[arr_index] = ft_substr(s, start, index - start);
-		arr_index++;
 	}
 	split_arr[arr_index] = NULL;
 	return (split_arr);
 }
+// start acts as a word_flag and an index for substr

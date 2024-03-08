@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 10:54:28 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/08 13:31:28 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 17:11:44 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # define NULL_SIZE 1
 # define CAPITALIZATION_DIFF 32
+# define UINT_MAX 4294967296
 
 // part 1
 int		ft_strlen(const char *str);

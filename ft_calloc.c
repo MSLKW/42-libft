@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 10:35:41 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/04 11:43:53 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 20:09:46 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,15 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	ptr = malloc(size * count);
-	if (ptr == NULL)
-		return (NULL);
-	ft_bzero(ptr, count);
+	if ((size != 0 && count > UINT_MAX / size)
+		|| (count != 0 && size > UINT_MAX / count))
+		ptr = NULL;
+	else
+	{
+		ptr = malloc(size * count);
+		if (ptr == NULL)
+			return (NULL);
+		ft_bzero(ptr, size * count);
+	}
 	return (ptr);
 }

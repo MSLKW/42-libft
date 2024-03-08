@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 10:35:43 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/01 13:06:10 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 16:38:52 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	ft_atoi(const char *str)
 
 	index = 0;
 	is_negative = 1;
+	number = 0;
 	while (ft_isspace(str[index]))
 		index++;
 	if (str[index] == '-' || str[index] == '+')
@@ -40,7 +41,7 @@ int	ft_atoi(const char *str)
 	}
 	else if (ft_isdigit(str[index]) == 0)
 		return (0);
-	while (ft_isdigit(str[index]) == 1)
+	while (str[index] != '\0' && ft_isdigit(str[index]) == 1)
 	{
 		number = number * 10 + (str[index] - '0');
 		index++;

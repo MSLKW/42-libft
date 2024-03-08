@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 17:54:55 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/07 18:13:47 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 20:12:03 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,21 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*map_list;
+	t_list	*new_node;
 
-	map_list = ft_lstnew(f(lst->content));
-	lst = lst->next; 
-	while (lst->next != NULL)
+	if (lst == NULL)
+		return (NULL);
+	map_list = NULL;
+	while (lst != NULL)
 	{
-		ft_lstadd_back(&map_list, ft_lstnew(lst->content));
+		new_node = ft_lstnew(f(lst->content));
+		if (new_node == NULL)
+		{
+			ft_lstclear(&new_node, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&map_list, new_node);
 		lst = lst->next;
 	}
-	ft_lstclear(&lst, del);
 	return (map_list);
 }

@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 17:00:48 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/08 16:01:18 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 20:14:37 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ char	*ft_strtrim(const char *s1, const char *set)
 	index = 0;
 	rindex = ft_strlen(s1) - 1;
 	if (s1[index] == '\0')
-		return ft_substr("", 0, 0);
+		return (ft_substr("", 0, 0));
 	if (set[index] == '\0')
-		return ft_substr(s1, index, ft_strlen(s1));
+		return (ft_substr(s1, index, ft_strlen(s1)));
 	while (s1[index] != '\0' && ft_checkset(s1[index], set))
 		index++;
 	while (rindex > index && ft_checkset(s1[rindex], set))
