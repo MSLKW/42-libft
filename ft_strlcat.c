@@ -6,18 +6,20 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 10:11:27 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/01 13:12:20 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 13:31:36 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	dest_length;
 	size_t	src_length;
 	size_t	src_index;
 
+	if (size == 0)
+		return (0);
 	dest_length = ft_strlen(dest);
 	src_length = ft_strlen(src);
 	if (size <= dest_length)

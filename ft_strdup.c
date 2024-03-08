@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 09:50:31 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/06 19:58:44 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 13:30:46 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,10 @@
 char	*ft_strdup(const char *src)
 {
 	char	*dest;
-	int		index;
 
-	dest = malloc(sizeof(char) * ft_strlen(src));
+	dest = malloc(sizeof(char) * ft_strlen(src) + NULL_SIZE);
 	if (dest == NULL)
 		return (NULL);
-	index = 0;
-	while (src[index] != '\0')
-	{
-		dest[index] = src[index];
-		index++;
-	}
-	dest[index] = '\0';
+	ft_strlcpy(dest, src, ft_strlen(src) + NULL_SIZE);
 	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 15:38:22 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/23 15:48:57 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 12:58:36 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	testcase()
 	tester("The Very Best", "Very", 3);
 	tester("ABCDEFG", "DFG", 100);
 	tester("Tranquility", "quil", 100);
+	tester("The cool kids club", "cool", 100);
 }
 
 int	main(int argc, char *argv[])

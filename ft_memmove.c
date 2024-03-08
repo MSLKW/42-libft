@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 15:36:50 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/01 13:10:49 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 12:37:00 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	dst_uchar = (unsigned char *)dst;
 	src_uchar = (unsigned char *)src;
+	if (len == 0)
+		return (dst);
 	if (dst_uchar > src_uchar)
 		while (len-- > 0)
 			dst_uchar[len] = src_uchar[len];

@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 13:56:29 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/26 14:06:59 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 10:54:16 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	testcase()
 	test_func("", "", 1);
 	test_func("", "", 2);
 	test_func("ABC", "ABC", 0);
+	test_func("\xff\xaa\xde\x12", "\xff\xaa\xde\x12 MOAIWJD", 4);
 }
 
 int	main(void)

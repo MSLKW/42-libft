@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 14:14:45 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/01 16:39:05 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 10:16:26 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ void	test_func(char *s, unsigned int start, size_t size)
 void	testcase()
 {	
 	char	src[50] = "The only way that is";
-	test_func(src, 5, 100);
+	test_func(src, 22, 100);
 	test_func(src, 4, 4);
+	test_func(src, 0, 100);
 }
 
 int	main(void)

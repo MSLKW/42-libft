@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 10:58:58 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/27 12:40:08 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 13:19:35 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	test(char *str)
 
 void	testcase()
 {
+	char	*n = "-085";
 	test("abc");
 	test("00123");
 	test("123ab456");
@@ -32,6 +33,10 @@ void	testcase()
 	test("   +123");
 	test("  -123 456");
 	test("\n123");
+	test("0");
+	test("945");
+	test(n);
+	test("\t\v\f\r\n \f-06050");
 }
 
 int	main(int argc, char *argv[])

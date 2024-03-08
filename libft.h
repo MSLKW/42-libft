@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 10:54:28 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/07 18:15:45 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/08 13:31:28 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ char	*ft_strrchr(const char *str, int c);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *src);
-size_t	ft_strlcat(char *dest, char *src, size_t size);
-size_t	ft_strlcpy(char *dest, char *src, size_t size);
+size_t	ft_strlcat(char *dest, const char *src, size_t size);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
