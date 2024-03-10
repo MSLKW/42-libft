@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 13:47:08 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/23 14:26:03 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/10 17:07:44 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	testcase()
 	tester("ABCBODW", 'B');
 	tester("ABCAOIJWF" , 'a');
 	tester("The trigger is strong", 'e');
+	tester("tripouille", 't' + 256);
 }
 
 int	main(int argc, char *argv[])

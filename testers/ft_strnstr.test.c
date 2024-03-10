@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 15:38:22 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/08 12:58:36 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/10 17:13:09 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,18 @@ void	tester(char *haystack, char *needle, size_t n)
 
 void	testcase()
 {
-	tester("Foo Bar Baz", "Bar", 11);
-	tester("COOL TIMMY AINT AROUND", "jack", 100);
-	tester("The Very Best", "Very", 3);
-	tester("ABCDEFG", "DFG", 100);
-	tester("Tranquility", "quil", 100);
-	tester("The cool kids club", "cool", 100);
+	// tester("Foo Bar Baz", "Bar", 11);
+	// tester("COOL TIMMY AINT AROUND", "jack", 100);
+	// tester("The Very Best", "Very", 3);
+	// tester("ABCDEFG", "DFG", 100);
+	// tester("Tranquility", "quil", 100);
+	// tester("The cool kids club", "cool", 100);
+	char	haystack[30] = "aaabcabcd";
+	char	needle[10] = "aabc";
+
+	tester("lorem ipsum dolor sit amet", "dolor", 15);
+	tester("see FF your FF return FF now FF", "FF", 32);
+	tester(haystack, needle, -1);
 }
 
 int	main(int argc, char *argv[])

@@ -1,36 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.test.c                                  :+:      :+:    :+:   */
+/*   ft_putnbr_fd.test.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/03 10:32:10 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/10 16:17:10 by maxliew          ###   ########.fr       */
+/*   Created: 2024/03/10 16:22:14 by maxliew           #+#    #+#             */
+/*   Updated: 2024/03/10 16:22:32 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdio.h>
-
-void	test_func(char *s1, char *s2)
-{
-	printf("s1: %s | s2: %s\n", s1, s2);
-	char *joined_str = ft_strjoin(s1, s2);
-	printf("joined_str: %s\n", joined_str);
-	printf("\n");
-}
-
-void	testcase()
-{	
-	char	s1[50] = "lorem ipsum";
-	char	s2[50] = "dolor sit amet";
-	test_func(s1, s2);
-	s1[0] = '\0';
-	test_func(s1, s2);
-}
 
 int	main(void)
 {
-	testcase();
+	ft_putnbr_fd(-2147483648LL, 2);
 }

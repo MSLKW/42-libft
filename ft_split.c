@@ -6,12 +6,11 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 11:53:06 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/08 20:11:16 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/10 14:40:13 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	count_words(const char *s, char c)
 {
@@ -45,7 +44,7 @@ char	**ft_split(const char *s, char c)
 
 	if (s == NULL)
 		return (NULL);
-	split_arr = ft_calloc(count_words(s, c) + 1, sizeof(char *));
+	split_arr = ft_calloc(count_words(s, c) + NULL_SIZE, sizeof(char *));
 	if (split_arr == NULL)
 		return (NULL);
 	index = -1;

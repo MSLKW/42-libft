@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 15:31:59 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/08 19:46:17 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/10 18:07:13 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static	int	count_digits(int n)
 	int	count;
 
 	count = 0;
+	if (n == -2147483648)
+		return (11);
 	if (n < 0)
 	{
 		n = -n;

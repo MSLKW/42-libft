@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 12:28:45 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/03 10:52:03 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/10 15:30:18 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ void	test_func(char *dest, char *src, size_t size)
 
 void	testcase()
 {	
-	char	dest[50] = "The only way that is";
-	char	src[50] = "More than one";
-	test_func(dest, src, 34);
+	char	dest[10] = "ab";
+	char	src[50] = "lorem ipsum dolor sit amet";
+	test_func(dest, src, 1);
 }
 
 int	main(void)

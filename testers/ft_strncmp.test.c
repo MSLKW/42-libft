@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:42:05 by maxliew           #+#    #+#             */
-/*   Updated: 2024/02/23 15:15:43 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/10 16:10:21 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ void	testcase()
 	tester("ABCDEF", "ABCDEFG", 7);
 	tester("ABCDEFG", "ABCDE", 7);
 	tester("ABCDEFG", "ABCDEF", 3);
+	tester("abcdefgh", "", 0);
+	tester("zyxbcdefgh", "abcdwxyz", 0);
 }
 
 int	main(int argc, char *argv[])

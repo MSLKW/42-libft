@@ -6,7 +6,7 @@
 /*   By: maxliew <maxliew@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 10:11:27 by maxliew           #+#    #+#             */
-/*   Updated: 2024/03/08 13:31:36 by maxliew          ###   ########.fr       */
+/*   Updated: 2024/03/10 15:36:41 by maxliew          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	src_length;
 	size_t	src_index;
 
-	if (size == 0)
+	if (dest == NULL && size == 0)
 		return (0);
 	dest_length = ft_strlen(dest);
 	src_length = ft_strlen(src);
