@@ -2,3 +2,4 @@
 a.out
 ./testers/a.out
 libft.a
+*.o
